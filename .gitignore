@@ -1,0 +1,22 @@
+# Model artifacts (generate by running classification.ipynb)
+*.h5
+*.keras
+*.pkl
+
+# TensorBoard logs
+logs/
+regressionlogs/
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+.env
+venv/
+env/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# macOS
+.DS_Store

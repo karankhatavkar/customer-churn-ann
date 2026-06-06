@@ -5,7 +5,7 @@ import streamlit as st
 import tensorflow as tf
 
 # Load the trained model
-model = tf.keras.models.load_model('model.h5')
+model = tf.keras.models.load_model('model.keras')
 
 # Load encoders and scaler
 with open('scaler.pkl', 'rb') as file:
@@ -51,10 +51,6 @@ geo_encoded_df = pd.DataFrame(geo_encoded, columns=onehot_encoder_geo.get_featur
 
 # Combine one-hot encoded columns with input data
 input_data = pd.concat([input_data.reset_index(drop=True), geo_encoded_df], axis=1)
-
-# Add dummy 'Exited' column if required by scaler
-if 'Exited' in scaler.feature_names_in_:
-    input_data['Exited'] = 0  # Dummy value, not used in prediction
 
 # Reorder columns to match scaler's expected order
 input_data = input_data[scaler.feature_names_in_]
