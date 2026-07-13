@@ -99,3 +99,8 @@ tensorboard --logdir logs/fit
 | `classification.ipynb` | Full pipeline: EDA → preprocessing → ANN training → artifact export |
 | `regression.ipynb` | ANN regression experiment predicting EstimatedSalary |
 | `prediction.ipynb` | Standalone inference demo on a single customer record |
+
+
+## Author
+
+Built by **[Karan Khatavkar](https://karankh.tech)** — AI/ML engineer (LLM, RAG & NLP), open to freelance & contract work.
